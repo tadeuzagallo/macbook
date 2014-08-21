@@ -188,23 +188,30 @@ $color: silver;
   }
 }
 
-.higher .flat {
-  width: 35px;
-  height: 18px;
+.higher {
+  .flat {
+    width: 35px;
+    height: 18px;
+  }
+
+  .key[data-shift].text::before {
+    line-height: 16px;
+  }
 }
 
 .key[data-shift] {
-  line-height: 13px;
+  line-height: 12px;
 
   &::before {
     content: attr(data-shift);
     display: block;
     font-size: 8px;
+    line-height: 11px;
   }
 
   &.text::before {
     font-size: 6px;
-    line-height: 15px;
+    line-height: 12px;
   }
 }
 
