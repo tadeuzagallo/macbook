@@ -56,7 +56,6 @@ function toggleCaps(event) {
 caps.addEventListener('click', toggleCaps);
 
 window.addEventListener('keydown', function(event) {
-  console.log(event)
   var kc = event.keyCode;
 
   if (kc === 20) {
