@@ -200,6 +200,13 @@ $color: silver;
   font-size: 9px;
 }
 
+.key:active {
+  height: 31px;
+  margin-top: 1px;
+
+  border-bottom-width: 2px;
+}
+
 .key.text {
   font-size: 7px;
   line-height: 35px;
@@ -208,6 +215,10 @@ $color: silver;
 .higher .key {
   height: 36px;
   line-height: 45px;
+
+  &:active {
+    height: 35px;
+  }
 }
 
 .updown {
@@ -227,6 +238,10 @@ $color: silver;
   width: 34px;
   height: 20px;
   line-height: 11px;
+
+  &:active {
+    height: 19px;
+  }
 }
 
 .key.medium {

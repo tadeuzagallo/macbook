@@ -15,6 +15,18 @@ var map = {
 
 var shift = false;
 
+function keydown(chr) {
+  return function (event) {
+    event.preventDefault();
+
+    window.onkeydown({
+      preventDefault: function() {},
+      keyCode: chr,
+      shiftKey: shift
+    });
+  };
+}
+
 [].map.call(document.querySelectorAll('.key'), function (key) {
   var str = key.innerHTML.trim();
   var chr;
@@ -26,20 +38,12 @@ var shift = false;
     return;
   }
 
-  key.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    window.onkeydown({
-      preventDefault: function() {},
-      keyCode: chr,
-      shiftKey: shift
-    });
-  });
+  key.addEventListener('click', keydown(chr));
 });
 
 var caps = document.querySelector('.caps-lock');
 
-caps.addEventListener('click', function (event) {
+function toggleCaps(event) {
     event.preventDefault();
      shift = !shift;
      if (shift) {
@@ -47,4 +51,15 @@ caps.addEventListener('click', function (event) {
      } else {
        caps.className = caps.className.replace(' active', '');
      }
+}
+
+caps.addEventListener('click', toggleCaps);
+
+window.addEventListener('keydown', function(event) {
+  console.log(event)
+  var kc = event.keyCode;
+
+  if (kc === 20) {
+    toggleCaps(event);
+  }
 });
