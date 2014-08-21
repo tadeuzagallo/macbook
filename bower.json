@@ -1,0 +1,29 @@
+{
+  "name": "macbook",
+  "version": "0.0.0",
+  "authors": [
+    "Tadeu Zagallo <tadeuzagallo@gmail.com>"
+  ],
+  "description": "A css version of my MBP running a JS version of my terminal",
+  "keywords": [
+    "macbook",
+    "pro",
+    "mbp",
+    "css3",
+    "terminal",
+    "zsh"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zsh.js": "~2.0.4",
+    "tmux.js": "~0.1.0"
+  }
+}

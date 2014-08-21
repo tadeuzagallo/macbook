@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    title Macbook Pro 13"
+    link(rel='stylesheet' href='vendor/zsh.js/dist/zsh.min.css')
+    link(rel='stylesheet' href='index.css')
+  body
+    .macbook
+      .top
+        #terminal.terminal
+      .bottom
+        .keyboard
+          .row
+            .key.flat esc
+            .key.flat.fn F1
+            .key.flat.fn F2
+            .key.flat.fn F3
+            .key.flat.fn F4
+            .key.flat.fn F5
+            .key.flat.fn F6
+            .key.flat.fn F7
+            .key.flat.fn F8
+            .key.flat.fn F9
+            .key.flat.fn F10
+            .key.flat.fn F11
+            .key.flat.fn F12
+            .key.flat ⏏
+          .row
+            .key(data-shift='~') `
+            .key(data-shift='!') 1
+            .key(data-shift='@') 2
+            .key(data-shift='#') 3
+            .key(data-shift='$') 4
+            .key(data-shift='%') 5
+            .key(data-shift='^') 6
+            .key(data-shift='&') 7
+            .key(data-shift='*') 8
+            .key(data-shift='(') 9
+            .key(data-shift=')') 0
+            .key(data-shift='_') -
+            .key(data-shift='+') +
+            .key.medium.right.text delete
+          .row
+            .key.medium.left.text tab
+            .key Q
+            .key W
+            .key E
+            .key R
+            .key T
+            .key Y
+            .key U
+            .key I
+            .key O
+            .key P
+            .key(data-shift='{') [
+            .key(data-shift='}') ]
+            .key(data-shift='|') \
+          .row
+            .key.large.left.text.caps-lock caps lock
+            .key A
+            .key S
+            .key D
+            .key F
+            .key G
+            .key H
+            .key J
+            .key K
+            .key L
+            .key(data-shift=':') ;
+            .key(data-shift='"') '
+            .key.large.right.text(data-shift="enter") return
+          .row
+            .key.xlarge.left.text shift
+            .key Z
+            .key X
+            .key C
+            .key V
+            .key B
+            .key N
+            .key M
+            .key ,
+            .key .
+            .key /
+            .key.xlarge.right.text shift
+          .row.higher
+            .key.left.text fn
+            .key.left.text control
+            .key.left.text(data-shift='alt') option
+            .key.command.l.text(data-shift='⌘') command
+            .key.space &nbsp;
+            .key.command.r.text(data-shift='⌘') command
+            .key.right.text(data-shift='alt') option
+            .key.flat ◂
+            .updown
+              .key.flat.up ▴
+              .key.flat.down ▾
+            .key.flat ▸
+        .trackpad
+  script(src='vendor/zsh.js/dist/zsh.min.js')
+  script(src='vendor/tmux.js/dist/tmux.min.js')
+  script(src='index.js')
