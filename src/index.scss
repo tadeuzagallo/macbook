@@ -152,8 +152,10 @@ $color: silver;
 
   background: $color;
   border-radius: 10px;
-  border: 1px solid lighten($color, 7%);
+  border: 1px solid lighten($color, 3%);
   border-top-color: darken($color, 7%);
+  box-shadow: lighten($color, 5%) 0 0 1px 5px inset;
+  background-color: lighten($color, 3%);
 
   -webkit-user-select: none;
   user-select: none;
@@ -161,12 +163,11 @@ $color: silver;
 
 .bottom:hover {
   .keyboard {
-    background-color: lighten($color, 2%);
-    box-shadow: lighten($color, 5%) 0 0 1px 5px inset;
 
     .key {
       color: #FFF;
       text-shadow: 0 0 #FFF;
+      box-shadow: #FFF 0 1px 3px 2px;
     }
   }
 }
@@ -192,7 +193,6 @@ $color: silver;
   background-color: #333;
   border-radius: 3px;
   border-bottom: 4px solid black;
-  box-shadow: #FFF 0 1px 3px 2px;
 
   color: #EEE;
   text-align: center;
@@ -300,7 +300,7 @@ $color: silver;
 .key.fn {
   text-align: right;
   font-size: 7px;
-  line-height: 18px;
+  line-height: 17px;
   padding-right: 3px;
 }
 
