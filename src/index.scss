@@ -51,6 +51,7 @@ $color: silver;
 
   border-radius: 20px;
   background-color: $color;
+  border-bottom: 1px solid darken($color, 10%);
 }
 
 .bottom::before {
@@ -67,16 +68,15 @@ $color: silver;
   content: '';
   position: absolute;
 
-  width: 20%;
-  height: 7px;
+  width: 130px;
+  height: 6px;
 
   top: 100%;
   left: 50%;
 
-  margin-top: -7px;
-  margin-left: -10%;
-  background: linear-gradient(darken($color, 25%), lighten($color, 15%));
-  /*background-color: black;*/
+  margin-top: -5px;
+  margin-left: -65px;
+  background: linear-gradient(darken($color, 25%), darken($color, 5%));
   border-radius: 10px 10px 0 0;
 }
 
@@ -245,3 +245,34 @@ $color: silver;
 }
 
 // bottom end
+
+// border start
+
+.border {
+  position: relative;
+  top: -23px;
+  width: 100%;
+  border-radius: 0 0 17px 17px;
+  height: 30px;
+  background: darken($color, 5%);
+  z-index: -1;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 130px;
+    height: 6px;
+
+    top: 23px;
+    left: 50%;
+
+    margin-top: -7px;
+    margin-left: -65px;
+    background: linear-gradient(darken($color, 5%), lighten($color, 25%));
+    border-radius: 0 0 10px 10px;
+    border: 1px solid darken($color, 10%);
+  }
+}
+
+// border end
