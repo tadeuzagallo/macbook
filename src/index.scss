@@ -154,6 +154,9 @@ $color: silver;
   border-radius: 10px;
   border: 1px solid lighten($color, 7%);
   border-top-color: darken($color, 7%);
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .bottom:hover {
@@ -284,6 +287,24 @@ $color: silver;
   font-size: 7px;
   line-height: 18px;
   padding-right: 3px;
+}
+
+.caps-lock::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3px;
+  height: 3px;
+  top: 5px;
+
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+$green-light: rgba(#4F4, .8);
+.caps-lock.active::before {
+  background-color: $green-light;
+  box-shadow: 0 0 6px $green-light;
 }
 
 .trackpad {
