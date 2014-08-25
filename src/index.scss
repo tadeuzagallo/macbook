@@ -22,7 +22,7 @@ $color: silver;
 
 .ribbon {
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 
 .flag {
@@ -400,3 +400,189 @@ $green-light: rgba(#4F4, .8);
 }
 
 // border end
+
+// mixins start
+
+@mixin animation($parameters...) {
+    -webkit-animation: $parameters;
+       -moz-animation: $parameters;
+        -ms-animation: $parameters;
+         -o-animation: $parameters;
+            animation: $parameters;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+
+// mixins end
+
+// keyframes start
+
+@include keyframes(fadeOut){
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@include keyframes(disappears) {
+  0% { height: calc(100% - 60px); }
+  100% { height: 0; }
+}
+
+// keyframes end
+
+// cover start
+
+.cover {
+  z-index: 3;
+  background: #ddd;
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  margin-top: 1px;
+  @include animation(disappears 1s 2.5s ease both);
+}
+
+.apple-logo,
+.apple-bottom:before,
+.apple-top .top-inside:after,
+.apple-bottom:after,
+.apple-top:before,
+.apple-top:after,
+.apple-bottom:before,
+.apple-bottom:after { background: #fff; }
+
+.apple-bite,
+.apple-bottom .bottom-inside,
+.apple-bottom,
+.apple-top,
+.apple-top .top-inside { background: #ddd; }
+
+.apple-logo {
+  border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;
+  height: 96px;
+  left: 50%;
+  margin: -34px 0 0 -51px;
+  position: absolute;
+  top: 50%;
+  width: 106px;
+  z-index: 10;
+  @include animation(fadeOut 0.5s ease 2s both);
+}
+
+.apple-bite {
+  position: absolute;
+  width: 60%;
+  height: 62%;
+  right: -40%;
+  top: 8%;
+  border-radius: 60%;
+}
+
+.apple-bottom .bottom-inside {
+  display: block;
+  position: absolute;
+  border-radius: 100% 100% 0% 0%;
+  width: 24.5%;
+  height: 400%;
+  bottom: -239%;
+  left: 38%;
+}
+
+.apple-bottom {
+  position: absolute;
+  width: 100%;
+  height: 4%;
+  bottom: -1%;
+}
+
+.apple-bottom:before {
+  content: '';
+  position: absolute;
+  width: 24%;
+  height: 400%;
+  border-radius: 0% 0% 100% 100%;
+  left: 21%;
+  bottom: 38%;
+}
+
+.apple-bottom:after {
+  content: '';
+  position: absolute;
+  width: 23.4%;
+  height: 400%;
+  border-radius: 0% 0% 100% 100%;
+  right: 21%;
+  bottom: 38%;
+}
+
+.apple-top .top-inside {
+  display: block;
+  position: absolute;
+  border-radius: 0 0 44% 44% / 0 0 100% 100%;
+  width: 63%;
+  height: 259%;
+  top: -92%;
+  left: 18.6%;
+  z-index: 3;
+}
+
+.apple-top .top-inside:after {
+  border-radius: 100% 0 100% 0;
+  content: "";
+  height: 283%;
+  left: 41%;
+  position: absolute;
+  top: -255%;
+  width: 90%;
+}
+
+.apple-top {
+  position: absolute;
+  width: 42%;
+  height: 4%;
+  top: 0px;
+  left: 29%;
+}
+
+.apple-top:before {
+  content: '';
+  position: absolute;
+  width: 62%;
+  height: 260%;
+  border-radius: 100% 100% 0% 0% / 100% 200% 0% 0%;
+  left: -27%;
+  top: 1%;
+}
+
+.apple-top:after {
+  content: '';
+  position: absolute;
+  width: 62%;
+  height: 260%;
+  border-radius: 100% 100% 0% 0% / 200% 100% 0% 0%;
+  right: -27%;
+  top: 1%;
+}
+
+// cover end
