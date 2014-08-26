@@ -1,0 +1,23 @@
+/*
+Errno::ENOENT: No such file or directory - src
+
+Backtrace:
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:474:in `read'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:474:in `update_stylesheet'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `each'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:291:in `watch'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin.rb:108:in `method_missing'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/exec.rb:509:in `watch_or_update'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/exec.rb:346:in `process_result'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/exec.rb:43:in `parse'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/exec.rb:22:in `parse!'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.14/bin/sass:13:in `<top (required)>'
+c:/Ruby200-x64/bin/sass:23:in `load'
+c:/Ruby200-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - src"; }
